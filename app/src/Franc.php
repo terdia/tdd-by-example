@@ -2,10 +2,10 @@
 
 namespace App;
 
-class Dollar extends Money
+class Franc extends Money
 {
 
-    public function times(int $multiplier): Dollar
+    public function times(int $multiplier): Franc
     {
         return new self($this->amount * $multiplier);
     }

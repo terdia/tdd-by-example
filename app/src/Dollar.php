@@ -2,7 +2,6 @@
 
 namespace App;
 
-use phpDocumentor\Reflection\Types\This;
 
 class Dollar
 {

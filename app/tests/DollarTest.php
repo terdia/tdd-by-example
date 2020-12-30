@@ -10,11 +10,9 @@ class DollarTest extends TestCase
 
     public function testMultiplication(): void
     {
-        $five    = new Dollar(5);
-        $product = $five->times(2);
-        self::assertEquals(10, $product->getAmount());
-        $product = $five->times(3);
-        self::assertEquals(15, $product->getAmount());
+        $five = new Dollar(5);
+        self::assertEquals(new Dollar(10), $five->times(2));
+        self::assertEquals(new Dollar(15), $five->times(3));
     }
 
     public function testEquality(): void

@@ -4,9 +4,10 @@ namespace App;
 
 class Dollar extends Money
 {
+    protected string $currency = 'USD';
 
-    public function times(int $multiplier): Dollar
+    public function times(int $multiplier): Money
     {
-        return new self($this->amount * $multiplier);
+        return Money::dollar($this->amount * $multiplier);
     }
 }

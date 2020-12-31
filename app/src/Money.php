@@ -24,14 +24,14 @@ class Money
         return $this->currency;
     }
 
-    public static function dollar(int $amount): Dollar
+    public static function dollar(int $amount): Money
     {
-        return new Dollar($amount, 'USD');
+        return new self($amount, 'USD');
     }
 
-    public static function franc(int $amount): Franc
+    public static function franc(int $amount): Money
     {
-        return new Franc($amount, 'CHF');
+        return new self($amount, 'CHF');
     }
 
     public function times(int $multiplier): Money
